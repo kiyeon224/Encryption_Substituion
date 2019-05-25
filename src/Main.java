@@ -7,33 +7,33 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int menu = 0;
 		
-		System.out.println("* ´ëÃ¼¹ı ¾ÏÈ£È­ ÇÁ·Î±×·¥ *\n");
+		System.out.println("* ëŒ€ì²´ë²• ì•”í˜¸í™” í”„ë¡œê·¸ë¨ *\n");
 
 		while (true) {
-			System.out.println("  1: ´ÜÀÏÄ¡È¯ ¾ÏÈ£È­");
-			System.out.println("  2: ½ÖÀÚÄ¡È¯ ¾ÏÈ£È­");
-			System.out.println("  ±âÅ¸: ÇÁ·Î±×·¥ Á¾·á");
-			System.out.print("  ¼±ÅÃ> ");
+			System.out.println("  1: ë‹¨ì¼ì¹˜í™˜ ì•”í˜¸í™”");
+			System.out.println("  2: ìŒìì¹˜í™˜ ì•”í˜¸í™”");
+			System.out.println("  ê¸°íƒ€: í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+			System.out.print("  ì„ íƒ> ");
 			try {
 				menu = sc.nextInt(); 
 			} catch (InputMismatchException e) {
 				menu = 0;
 			}
 			switch (menu) {
-			case 1:  //´ÜÀÏÄ¡È¯
+			case 1:  //ë‹¨ì¼ì¹˜í™˜
 				MonoalphabeticSubstitution ms = new MonoalphabeticSubstitution();
 				ms.create_board();
 				ms.encrypt();
 				ms.decrypt();	
 				break;
-			case 2:  //½ÖÀÚÄ¡È¯
+			case 2:  //ìŒìì¹˜í™˜
 				PolygramSubstitution ps = new PolygramSubstitution();	
-//				ps.create_board();
-//				ps.encrypt();
-//				ps.decrypt();	
+				ps.create_board();
+				ps.encrypt();
+				ps.decrypt();	
 				break;
-			default:  //Á¾·á
-				System.out.println("\nÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			default:  //ì¢…ë£Œ
+				System.out.println("\ní”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				System.exit(0);
 			}
 			System.out.println("\n\n");
